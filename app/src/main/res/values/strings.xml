@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FaceCast</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="bienvenue">Bienvenue sur l\'application FaceCast !</string>
+    <string name="objectifs">
+            Effectuez des demandes de postulations pour les rôles et les événements qui vous intéressent.
+            Consulter vos différentes demandes afin de voir si elles ont été traitées ou si vous souhaitez vous désister
+    </string>
+</resources>
