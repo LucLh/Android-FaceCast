@@ -15,28 +15,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.util.ArrayList;
 
 import fr.btssio.project.facecast.fragments.EventsFragment;
 import fr.btssio.project.facecast.fragments.HomeFragment;
 import fr.btssio.project.facecast.fragments.PostulationsFragment;
-import fr.btssio.project.facecast.objects.Event;
+import fr.btssio.project.facecast.repository.EventRepository;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ListView lv;
-    JSONObject jsonResponse;
-    JSONArray arrayJson;
-    ArrayList<Event> items;
-    ArrayAdapter<Event> objAdapter;
-    private static final String SERVER_URL = "192.168.43.206:3000";
+    private String url;
+    private EventRepository eventRepo;
     Fragment fragment;
 
     @Override
@@ -63,6 +52,15 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        url = "192.168.1.34:3000";
+        eventRepo = new EventRepository(this);
+        eventRepo.setUrl(url);
+
+        fragment = new HomeFragment();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.frame_container,fragment).commit();
+
     }
 
     @Override

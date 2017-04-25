@@ -6,21 +6,27 @@ package fr.btssio.project.facecast.objects;
 
 public class Event {
 
+    private String id;
     private String name;
     private String date;
-    private Integer numberDays;
+    private String numberDays;
     private String departement;
     private String city;
     private String eventType;
 
-    public Event(String name,String date,Integer numberDays,String departement,String city,String eventType) {
+    public Event(String id,String name,String date,String numberDays,String departement,String city,String eventType) {
         super();
+        this.id = id;
         this.name = name;
         this.date = date;
         this.numberDays = numberDays;
         this.departement = departement;
         this.city = city;
         this.eventType = eventType;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
@@ -31,7 +37,7 @@ public class Event {
         return date;
     }
 
-    public Integer getNumberDays() {
+    public String getNumberDays() {
         return numberDays;
     }
 
@@ -45,6 +51,10 @@ public class Event {
 
     public String getEventType() { return eventType; }
 
+    public void setId(String value) {
+        id = value;
+    }
+
     public void setName(String value) {
         name = value;
     }
@@ -53,7 +63,7 @@ public class Event {
         date = value;
     }
 
-    public void setNumberDays(Integer value) {
+    public void setNumberDays(String value) {
         numberDays = value;
     }
 
@@ -69,7 +79,7 @@ public class Event {
 
     @Override
     public String toString() {
-        return name + " " + date + " " + numberDays + " " + departement + " " + city;
+        return name + " " + date + " " + numberDays + " " + departement + " " + city + " " + eventType;
     }
 
 }

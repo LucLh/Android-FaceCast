@@ -5,6 +5,14 @@
     tools:context="fr.btssio.project.facecast.fragments.EventsFragment">
 
     <!-- TODO: Update blank fragment layout -->
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="562dp" >
+    </ListView>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

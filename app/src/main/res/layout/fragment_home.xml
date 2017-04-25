@@ -10,25 +10,28 @@
 
         <ImageView
             android:id="@+id/logo_accueil"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:src="@drawable/logo_facecast"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"/>
+            android:src="@drawable/logo_facecast" />
 
         <TextView
             android:id="@+id/bienvenue"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/bienvenue"
             android:textSize="@dimen/text_size_bienvenue"
-            android:layout_below="@id/logo_accueil"/>
+            android:textAlignment="center"
+            android:layout_below="@id/logo_accueil"
+            android:paddingTop="25dp"
+            android:paddingBottom="15dp"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/objectifs"
-            android:layout_below="@id/bienvenue"/>
+            android:layout_below="@id/bienvenue"
+            android:paddingLeft="10dp"
+           />
 
     </RelativeLayout>
 
